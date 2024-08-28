@@ -16,7 +16,7 @@ public class RestartTitleCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (args.length == 1 && args[0].equalsIgnoreCase("reload")) {
+        if (args.length == 1 && "reload".equalsIgnoreCase(args[0])) {
             if (sender.hasPermission("mimicode.restarttitle")) {
                 Config.reloadConfig();
                 MessageUtil.sendSucces(sender, "Config został pomyślnie przeładowany!");
