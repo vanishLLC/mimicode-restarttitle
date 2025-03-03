@@ -17,7 +17,7 @@ public class RestartEvent implements Listener {
     @EventHandler
     public void onServerCommand(ServerCommandEvent event) {
         String command = event.getCommand().toLowerCase();
-        if (command.equals("restart") || command.equals("stop")) {
+        if ("restart".equals(command) || "stop".equals(command)) {
             String line1 = Main.getInstance().getConfig().getString("restart-message.line1");
             String line2 = Main.getInstance().getConfig().getString("restart-message.line2");
             String line3 = Main.getInstance().getConfig().getString("restart-message.line3");
